@@ -1,0 +1,47 @@
+/* .ContainerHome{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    background-color: aqua;
+}
+
+.productos{
+    margin-top: 200px;
+    margin-bottom: 200px;
+} */
+
+.containerHomeAdm{
+    display: flex;
+    flex-direction: row;
+}
+.admBtnContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: flex-start;
+    background-color: #30925e;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.324);
+    margin: 2% 1%;
+    border-radius: 20px;
+}
+
+.btnPagAdm{
+    display: block;
+    height: 40px;
+    width: 200px;
+    border-radius: 7px;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 20px;
+}
+
+.btnPagAdmOut{
+    display: block;
+    height: 40px;
+    width: 200px;
+    border-radius: 7px;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 20px;
+    background-color: rgb(178, 34, 34);
+}

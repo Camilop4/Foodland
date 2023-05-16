@@ -1,0 +1,18 @@
+.aboutContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    gap: 50px;
+}
+
+.titleAbout{
+    align-self: flex-start ;
+}
+.textAbout{
+    display: flex;
+    text-align: justify;
+    width: 70%;
+    margin-top: 42px;
+}
