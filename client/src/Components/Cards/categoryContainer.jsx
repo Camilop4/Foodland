@@ -17,7 +17,7 @@ const CategoryContainer = () => {
   /* IMPORT STATES */
 
   const { categories } = useSelector((state) => state.products);
-
+  console.log(categories);
   const localCategories = categories.sort((a, b) => {
     if (a._id < b._id) return -1;
     if (a._id > b._id) return 1;
