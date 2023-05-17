@@ -31,6 +31,7 @@ export const getAllProducts = () => {
           payload: response.data,
         });
       dispatch(ready());
+      console.log(response.data)
     } catch (error) {
       console.log(error);
       dispatch({
@@ -38,6 +39,7 @@ export const getAllProducts = () => {
         payload: error,
       });
       dispatch(ready());
+      
     }
   };
 };
