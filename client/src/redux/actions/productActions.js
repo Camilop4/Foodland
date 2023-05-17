@@ -25,13 +25,13 @@ export const getAllProducts = () => {
     try {
       dispatch(loading());
       const response = await axios.get(`${URL}/api/products`);
+      console.log(response);
       if (response.data)
         dispatch({
           type: action.GET_ALL_PRODUCTS,
           payload: response.data,
         });
       dispatch(ready());
-      console.log(response.data)
     } catch (error) {
       console.log(error);
       dispatch({
@@ -39,7 +39,6 @@ export const getAllProducts = () => {
         payload: error,
       });
       dispatch(ready());
-      
     }
   };
 };
