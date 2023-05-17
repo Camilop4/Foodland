@@ -17,9 +17,7 @@ import PlaceOrderScreen from "./Views/Order/placeOrderScreen";
 import UserProfile from "./Views/UserProfile/UserProfile";
 import UserOrders from "./Components/UserOrders/UserOrders";
 import Error404 from "./Components/Error/error404";
-import axios from 'axios';
 
-axios.defaults.baseURL = 'https://foodland-production-b1ca.up.railway.app';
 
 function App() {
   const location = useLocation();
