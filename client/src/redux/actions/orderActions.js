@@ -9,7 +9,7 @@ import axios from "axios";
 import swal from "sweetalert";
 
 //const URL = process.env.REACT_APP_URL ?? "http://localhost:5000";
-const URL = "foodland-production-b1ca.up.railway.app";
+const URL = "https://foodland-production-b1ca.up.railway.app";
 
 // //  ============ Actualizo el total de la orden ======================
 export const total_order = (order) => {

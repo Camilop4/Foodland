@@ -15,7 +15,7 @@ import {
 import Axios from "axios";
 
 //const URL = process.env.REACT_APP_URL ?? "http://localhost:5000";
-const URL = "foodland-production-b1ca.up.railway.app";
+const URL = "https://foodland-production-b1ca.up.railway.app";
 
 export const signin = (email, password) => async (dispatch) => {
   dispatch({ type: USER_SIGNIN_REQUEST, payload: email, password });

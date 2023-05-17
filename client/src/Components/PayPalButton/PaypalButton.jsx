@@ -7,7 +7,7 @@ import axios from "axios";
 import "./paypal.css";
 import { deleteCart } from "../../redux/actions/cartActions";
 //const URL = process.env.REACT_APP_URL ?? "http://localhost:5000/api/orders/";
-const URL = "foodland-production-b1ca.up.railway.app";
+const URL = "https://foodland-production-b1ca.up.railway.app";
 // This values are the props in the UI
 // const amount = "2";
 // const currency = "USD";
