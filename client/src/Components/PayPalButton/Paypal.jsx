@@ -3,8 +3,9 @@ import { PayPalButton } from "react-paypal-button-v2";
 import {useDispatch} from 'react-redux'
 import React, { useEffect, useState } from "react";
 import Loader from "../Loader/Loader";
-const URL = "http://localhost:5000";
+//const URL = "http://localhost:5000";
 // const URL = "https://foodland-production.up.railway.app";
+const URL = "foodland-production-b1ca.up.railway.app";
 
 function Paypal({order}) {
 		const dispatch = useDispatch();
