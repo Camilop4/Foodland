@@ -19,7 +19,7 @@ import UserOrders from "./Components/UserOrders/UserOrders";
 import Error404 from "./Components/Error/error404";
 import axios from 'axios';
 
-axios.defaults.baseURL = 'foodland-production-b1ca.up.railway.app/';
+axios.defaults.baseURL = 'foodland-production-b1ca.up.railway.app';
 
 function App() {
   const location = useLocation();
