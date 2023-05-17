@@ -18,7 +18,7 @@ const CategoryContainer = () => {
 
   const { categories } = useSelector((state) => state.products);
   console.log(categories);
-  const localCategories = categories.sort((a, b) => {
+  const localCategories = categories?.sort((a, b) => {
     if (a._id < b._id) return -1;
     if (a._id > b._id) return 1;
     return 0;
