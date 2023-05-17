@@ -3,7 +3,7 @@
 import axios from "axios";
 import * as action from "./action-types"; // Import para traer todas las actions-types
 
-const URL = process.env.REACT_APP_URL ?? "http://localhost:5000";
+//const URL = process.env.REACT_APP_URL ?? "http://localhost:5000";
 
 // const URL = "https://foodland-production.up.railway.app";
 
@@ -26,7 +26,7 @@ export const getAllProducts = () => {
   return async (dispatch) => {
     try {
       dispatch(loading());
-      const response = await axios.get(`${URL}/api/products`);
+      const response = await axios.get('/api/products');
       dispatch({
         type: action.GET_ALL_PRODUCTS,
         payload: response.data,
@@ -47,7 +47,7 @@ export const getAllCategories = () => {
   return async (dispatch) => {
     try {
       dispatch(loading());
-      const response = await axios.get(`${URL}/api/products/categories`);
+      const response = await axios.get('/api/products/categories');
       dispatch({
         type: action.GET_ALL_CATEGORIES,
         payload: response.data,
@@ -81,9 +81,9 @@ export const getDetail = (id) => {
   return async (dispatch) => {
     try {
       dispatch(loading());
-      const response = await axios.get(`${URL}/api/products/slug/${id}`);
+      const response = await axios.get(`/api/products/slug/${id}`);
 
-      // console.log(response.data);
+       console.log(response.data);
       dispatch({
         type: action.DETAIL_PRODUCT,
         payload: response.data,
@@ -106,7 +106,7 @@ export const getByCategory = (category) => {
   return async (dispatch) => {
     try {
       dispatch(loading());
-      const response = await axios.get(`${URL}/api/products`);
+      const response = await axios.get('/api/products');
       const arrayProducts = response.data.products;
 
       if (category === "allProducts") {
@@ -189,7 +189,7 @@ export const filterPrice = (products) => {
 export const addCategory = (category) => async (dispatch) => {
   try {
     dispatch({ type: action.ADD_CATEGORY_REQUEST });
-    const { data } = await axios.post(`${URL}/api/categories`, category);
+    const { data } = await axios.post('/api/categories', category);
     dispatch({
       type: action.ADD_CATEGORY_SUCCESS,
       payload: data,
