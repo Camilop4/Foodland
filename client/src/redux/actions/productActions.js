@@ -48,6 +48,7 @@ export const getAllCategories = () => {
     try {
       dispatch(loading());
       const response = await axios.get(`${URL}/api/products/categories`);
+      console.log(response.data);
       dispatch({
         type: action.GET_ALL_CATEGORIES,
         payload: response.data,
