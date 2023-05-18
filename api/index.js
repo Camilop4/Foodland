@@ -15,7 +15,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: ["https://foodland-76lq3j1fm-camilop4.vercel.app"],
+    origin: ["*"],
     credentials: true,
   })
 );
