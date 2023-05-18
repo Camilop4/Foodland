@@ -27,7 +27,8 @@ const initialState = {
   categories: [],
   AllProducts: [],
   product: {},
-  filterState:true
+  filterState:true,
+  isSearch: false,
 };
 
 const rootReducer = (state = initialState, action) => {
