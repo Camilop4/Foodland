@@ -15,7 +15,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: ["*"],
+    origin: ["http://localhost:3000", "https://foodland-76lq3j1fm-camilop4.vercel.app"],
     credentials: true,
   })
 );
