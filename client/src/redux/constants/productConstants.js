@@ -18,6 +18,8 @@ const CLEAR_PRODUCTS = "CLEAR_PRODUCTS"; // Limpiar el estado de "products"
 
 /* ======================= FILTER ==========================*/
 const FILTERPRICE = "FILTERPRICE"; //Action que filtra por precio
+const SEARCHFALSE = "SEARCHFALSE";
+const SEARCHTRUE = "SEARCHTRUE";
 
 /* ======================= CATEGORIES ==========================*/
 const GET_BY_CATEGORY = "GET_BY_CATEGORY"; // trae una categoria especifica
@@ -61,5 +63,7 @@ module.exports = {
   PRODUCT_CREATE_REQUEST,
   PRODUCT_CREATE_SUCCESS,
   PRODUCT_CREATE_FAIL,
+  SEARCHFALSE,
+  SEARCHTRUE,
 
 };

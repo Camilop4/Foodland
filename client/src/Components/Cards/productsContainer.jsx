@@ -7,7 +7,7 @@ import ProductCard from "./productCard"
 import swal from "sweetalert"
 
 //IMPORT ACTIONS
-import { handle_sorts, getByCategory, getAllProducts } from "../../redux/actions/productActions";
+import { handle_sorts, getByCategory, getAllProducts, serachFalse } from "../../redux/actions/productActions";
 import { updateCart} from "../../redux/actions/cartActions";
 //IMPORT LOCALSTORE
 import useLocalStore from "../../hooks/useLocalStore";
@@ -23,7 +23,7 @@ const ProductsContainer = () => {
   const { categoriesId } = useParams();
 
   /* IMPORT STATES */
-  const {products, display, filterState } = useSelector((state) => state.products);
+  const {products, display, filterState, isSearch } = useSelector((state) => state.products);
 
   /* PAGINADO */
   const [numeroPagina, setNumeroPagina] = useState(1);
@@ -93,10 +93,10 @@ const ProductsContainer = () => {
 
   useEffect(() => {
     // si esta en true me despacha la accion que me trae los prod por
-    if (filterState) {
-      dispatch(getAllProducts())
+    if (filterState && !isSearch) {
+      dispatch(getAllProducts());
       dispatch(getByCategory(categoriesId));  
-       }
+       } else { dispatch (serachFalse())}
   }, [dispatch]);
 if (userInfo?.isAdmin){
   return(<div className="productsContainer">

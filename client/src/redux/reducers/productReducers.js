@@ -23,6 +23,8 @@ import {
   PRODUCT_CREATE_REQUEST,
   PRODUCT_CREATE_SUCCESS,
   PRODUCT_CREATE_FAIL,
+  SEARCHFALSE,
+  SEARCHTRUE,
 } from "../constants/productConstants";
 
 const initialState = {
@@ -32,10 +34,21 @@ const initialState = {
   AllProducts: [],
   product: {},
   filterState: true,
+  isSearch: false,
 };
 
 const productsReducer = (state = initialState, action) => {
   switch (action.type) {
+    case SEARCHTRUE: 
+    return {
+      ...state,
+      isSearch: true,
+    }
+    case SEARCHFALSE:
+      return{
+        ...state,
+        isSearch: false,
+      }
     case LOADING:
       return {
         ...state,

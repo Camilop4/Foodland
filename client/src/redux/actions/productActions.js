@@ -272,3 +272,14 @@ export const createProduct = (product) => async (dispatch, getState) => {
   }
 };
 
+export const serachTrue = () => {
+  return {
+    type: action.SEARCHTRUE,
+  }
+};
+
+export const serachFalse = () => {
+  return {
+    type: action.SEARCHFALSE,
+  }
+};

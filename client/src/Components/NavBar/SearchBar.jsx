@@ -4,7 +4,7 @@ import React from "react";
 import "./SearchBar.css";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { setProduct, setFilterState } from "../../redux/actions/productActions";
+import { setProduct, setFilterState, serachTrue } from "../../redux/actions/productActions";
 import { useNavigate } from "react-router-dom";
 
 const SearchBar = () => {
@@ -24,6 +24,7 @@ const SearchBar = () => {
     if (filteredProducts.length > 0){
         // dispatch(setFilterState(false))
         dispatch(setProduct(filteredProducts));
+        dispatch(serachTrue());
         navigate("/categories/allProducts");
     } else {
 			swal({
